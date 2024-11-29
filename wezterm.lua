@@ -8,7 +8,8 @@ local config = wezterm.config_builder()
 
 config.default_prog = { "nu", "-l" }
 
-config.color_scheme = "Tomorrow Night"
+-- config.color_scheme = "Tomorrow Night"
+config.colors = require "src.colors"
 
 config.keys = require "src.keymap"
 
