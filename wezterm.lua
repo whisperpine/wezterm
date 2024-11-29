@@ -11,7 +11,8 @@ config.default_prog = { "nu", "-l" }
 -- config.color_scheme = "Tomorrow Night"
 config.colors = require "src.colors"
 
-config.keys = require "src.keymap"
+local keymap_mod = require "src.keymap"
+keymap_mod.apply_to_config(config)
 
 local window_mod = require "src.window"
 window_mod.apply_to_config(config)
