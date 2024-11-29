@@ -1,4 +1,4 @@
-local wezterm = require 'wezterm'
+local wezterm = require "wezterm"
 
 -- This is the module table that we will export
 local module = {}
@@ -29,15 +29,15 @@ function module.apply_to_config(config)
   config.font_rules = {
     -- For Bold-but-not-italic text, use this relatively bold font, and override
     -- its color to a tomato-red color to make bold text really stand out.
-    { intensity = 'Bold', italic = false, font = font_normal },
+    { intensity = "Bold", italic = false, font = font_normal },
     -- Bold-and-italic
-    { intensity = 'Bold', italic = true, font = font_italic },
+    { intensity = "Bold", italic = true, font = font_italic },
     -- normal-intensity-and-italic
-    { intensity = 'Normal', italic = true, font = font_italic },
+    { intensity = "Normal", italic = true, font = font_italic },
     -- half-intensity-and-italic (half-bright or dim)
-    { intensity = 'Half', italic = true, font = font_italic },
+    { intensity = "Half", italic = true, font = font_italic },
     -- half-intensity-and-not-italic
-    { intensity = 'Half', italic = false, font = font_normal },
+    { intensity = "Half", italic = false, font = font_normal },
   }
 end
 

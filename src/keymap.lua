@@ -1,24 +1,24 @@
-local wezterm = require 'wezterm'
+local wezterm = require "wezterm"
 
 local module = {
   {
-    key = 'PageUp',
-    mods = 'CTRL',
+    key = "PageUp",
+    mods = "CTRL",
     action = wezterm.action.DisableDefaultAssignment,
   },
   {
-    key = 'PageDown',
-    mods = 'CTRL',
+    key = "PageDown",
+    mods = "CTRL",
     action = wezterm.action.DisableDefaultAssignment,
   },
   {
-    key = 'PageUp',
-    mods = 'CTRL|SHIFT',
+    key = "PageUp",
+    mods = "CTRL|SHIFT",
     action = wezterm.action.DisableDefaultAssignment,
   },
   {
-    key = 'PageDown',
-    mods = 'CTRL|SHIFT',
+    key = "PageDown",
+    mods = "CTRL|SHIFT",
     action = wezterm.action.DisableDefaultAssignment,
   },
 }
