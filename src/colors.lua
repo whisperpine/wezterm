@@ -1,5 +1,3 @@
-local wezterm = require "wezterm"
-
 -- This is the module table that we will export.
 local module = {
   -- The default text color.
