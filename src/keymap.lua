@@ -14,6 +14,7 @@ local keymap = {
   { key = "X", mods = "CTRL|SHIFT", action = act.ActivateCopyMode },
   { key = "F", mods = "CTRL|SHIFT", action = act.Search { CaseInSensitiveString = "" } },
   { key = "W", mods = "CTRL|SHIFT", action = act.CloseCurrentTab { confirm = true } },
+  { key = "q", mods = "SUPER", action = act.CloseCurrentTab { confirm = true } },
   { key = "C", mods = "CTRL|SHIFT", action = act { CopyTo = "Clipboard" } },
   { key = "V", mods = "CTRL|SHIFT", action = act { PasteFrom = "Clipboard" } },
   { key = "0", mods = "CTRL", action = act.ResetFontSize },
@@ -22,6 +23,7 @@ local keymap = {
   { key = "=", mods = "CTRL", action = act.IncreaseFontSize },
   { key = "PageUp", mods = "SHIFT", action = act { ScrollByPage = -1 } },
   { key = "PageDown", mods = "SHIFT", action = act { ScrollByPage = 1 } },
+  { key = "h", mods = "SUPER", action = act.HideApplication },
 }
 
 function module.apply_to_config(config)

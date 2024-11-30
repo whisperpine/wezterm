@@ -3,18 +3,32 @@ local wezterm = require "wezterm"
 -- This is the module table that we will export
 local module = {}
 
+local target_triple = wezterm.target_triple
+
 wezterm.on("gui-startup", function(cmd)
-  local tab, pane, window = wezterm.mux.spawn_window(cmd or {
-    position = { x = 800, y = 400 },
-  })
+  if string.find(target_triple, "windows") then
+    -- tab, pane, window
+    local _, _, _ = wezterm.mux.spawn_window(cmd or {
+      position = { x = 800, y = 400 },
+    })
+  elseif string.find(target_triple, "darwin") then
+    local _, _, _ = wezterm.mux.spawn_window(cmd or {
+      position = { x = 650, y = 390 },
+    })
+  end
 end)
 
 function module.apply_to_config(config)
   config.enable_tab_bar = false
   config.window_close_confirmation = "NeverPrompt"
   config.window_decorations = "RESIZE"
-  config.initial_rows = 38
-  config.initial_cols = 116
+  if string.find(target_triple, "windows") then
+    config.initial_rows = 38
+    config.initial_cols = 116
+  elseif string.find(target_triple, "darwin") then
+    config.initial_rows = 39
+    config.initial_cols = 121
+  end
   config.window_padding = {
     left = "1.5cell",
     right = "1.5cell",

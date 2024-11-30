@@ -7,7 +7,15 @@ local config = wezterm.config_builder()
 -- This is where you actually apply your config choices.
 
 config.front_end = "WebGpu"
-config.default_prog = { "nu", "-l" }
+
+-- x86_64-pc-windows-msvc - Windows
+-- x86_64-apple-darwin - macOS (Intel)
+-- aarch64-apple-darwin - macOS (Apple Silicon)
+-- x86_64-unknown-linux-gnu - Linux
+local target_triple = wezterm.target_triple
+if string.find(target_triple, "windows") then
+  config.default_prog = { "nu", "-l" }
+end
 
 -- config.color_scheme = "Tomorrow Night"
 config.colors = require "src.colors"
