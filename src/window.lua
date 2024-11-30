@@ -5,7 +5,7 @@ local module = {}
 
 wezterm.on("gui-startup", function(cmd)
   local tab, pane, window = wezterm.mux.spawn_window(cmd or {
-    position = { x = 800, y = 400, },
+    position = { x = 800, y = 400 },
   })
 end)
 

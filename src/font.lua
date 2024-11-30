@@ -6,7 +6,7 @@ local module = {}
 local font_normal = wezterm.font_with_fallback {
   { family = "Cascadia Mono", weight = "Regular" },
   { family = "Symbols Nerd Font", scale = 1 },
-  { family = "Sarasa Mono SC", weight = "DemiBold"},
+  { family = "Sarasa Mono SC", weight = "DemiBold" },
 }
 local font_italic = wezterm.font_with_fallback {
   { family = "Cascadia Mono", weight = "Regular", italic = true },

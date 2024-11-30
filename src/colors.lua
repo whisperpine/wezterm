@@ -1,4 +1,4 @@
-local wezterm = require 'wezterm'
+local wezterm = require "wezterm"
 
 -- This is the module table that we will export.
 local module = {
@@ -24,7 +24,7 @@ local module = {
 
   -- The color of the scrollbar "thumb".
   -- The portion that represents the current viewport.
-  scrollbar_thumb = '#222222',
+  scrollbar_thumb = "#222222",
 
   -- The color of the split lines between panes
   split = "#121212",
