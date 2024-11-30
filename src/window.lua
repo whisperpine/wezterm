@@ -13,7 +13,7 @@ function module.apply_to_config(config)
   config.enable_tab_bar = false
   config.window_close_confirmation = "NeverPrompt"
   config.window_decorations = "RESIZE"
-  config.initial_rows = 41
+  config.initial_rows = 38
   config.initial_cols = 116
   config.window_padding = {
     left = "1.5cell",

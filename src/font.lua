@@ -21,8 +21,8 @@ local font_italic = wezterm.font_with_fallback {
 -- the config is for them to export an `apply_to_config`
 -- function that accepts the config object, like this:
 function module.apply_to_config(config)
-  config.cell_width = 0.95
-  config.line_height = 0.95
+  config.cell_width = 1.0
+  config.line_height = 1.0
   config.font_size = 11.0
   config.font = font_normal
   config.allow_square_glyphs_to_overflow_width = "Always"
