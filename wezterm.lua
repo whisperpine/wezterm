@@ -6,6 +6,7 @@ local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices.
 
+config.front_end = "WebGpu"
 config.default_prog = { "nu", "-l" }
 
 -- config.color_scheme = "Tomorrow Night"
