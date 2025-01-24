@@ -13,7 +13,7 @@ wezterm.on("gui-startup", function(cmd)
     })
   elseif string.find(target_triple, "darwin") then
     local _, _, _ = wezterm.mux.spawn_window(cmd or {
-      position = { x = 650, y = 390 },
+      position = { x = 1350, y = 500 },
     })
   end
 end)
@@ -27,7 +27,7 @@ function module.apply_to_config(config)
     config.initial_cols = 116
   elseif string.find(target_triple, "darwin") then
     config.initial_rows = 39
-    config.initial_cols = 121
+    config.initial_cols = 110
   end
   config.window_padding = {
     left = "1.5cell",
